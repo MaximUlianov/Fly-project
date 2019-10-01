@@ -7,7 +7,7 @@ For building the web-application you need:
 - [NodeJS](https://nodejs.org)
 - [Apache maven](https://maven.apache.org/) 
 
-##Documentation
+###Documentation
 1. [Documentation](https://github.com/MaximUlianov/Fly-project/tree/master/documentation) <br>
   1.1 [SRS](https://github.com/MaximUlianov/Fly-project/blob/master/documentation/SoftwareRequirmentsSpecification.md) <br>
  
