@@ -26,9 +26,9 @@
 - Окно регистрации
   ![Окно регистрации](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_4.png)
 - Страница ввода дополнительной информации о багаже
-  ![Страница выбора посадочного места](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_3.png)
+  ![Страница ввода информации о багаже](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_3.png)
 - Страница просмотра заказа 
-
+  ![Страница просмотра заказа](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_3.png)
 - Страница подтверждения заказа
   ![Страница подтверждения заказа](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_6.png) 
 
