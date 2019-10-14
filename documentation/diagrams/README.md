@@ -10,8 +10,7 @@
 	  1.2.5. [Подтверждение заказа](#1.2.5) <br>
  
 ### 1. Диаграмма прецедентов <a name="1"></a> 
-![Главная страница](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_1.png)
-
+![UseCase](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/useCase/Use%20Case.jpg)
 #### 1.1. Актеры <a name="1.1"></a>
 | Актёр | Описание | 
 |:---|:---|
