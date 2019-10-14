@@ -14,6 +14,7 @@
   2.3. [Ввод дополнительной информации о багаже](#2.3) <br>
   2.4. [Просмотр заказа](#2.4) <br>
   2.5. [Подтверждение заказа](#2.5) <br>
+3. [Диаграмма последовательности](#3) <br>
  
 ### 1. Диаграмма прецедентов <a name="1"></a> 
 ![UseCase](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/useCase/Use%20Case.jpg)
@@ -148,7 +149,8 @@
 Система показывает сообщение, что заказ успешно выполнен и отправляет билеты на e-mail пользователя. При нажатии на "Continue to order", выполняется переход на выбор рейса. <br>
 ![Confirmation](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/activity/5_Confirmation.jpg)
  
- 
+### 3. Диаграмма последовательности <a name="3"></a>
+![Sequence](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/sequence/Sequence%20Diagram.jpg)
  
  
  
