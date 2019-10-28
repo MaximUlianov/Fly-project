@@ -15,6 +15,16 @@
   2.4. [Просмотр заказа](#2.4) <br>
   2.5. [Подтверждение заказа](#2.5) <br>
 3. [Диаграмма последовательности](#3) <br>
+4. [Диаграммы состояний](#4) <br>
+	4.1. [Выбор рейса] (#4.1) <br>
+	4.2. [Информация о дополнительном багаже] (#4.2) <br>
+	4.3. [Регистрация на рейс] (#4.3) <br>
+	4.4. [Панель поиска] (#4.4) <br>
+5. [Диаграммы классов](#5) <br>
+	5.1 [Backend](#5.1) <br>
+	5.2 [Security](#5.2) <br>
+	5.3	[Database](#5.3) <br>
+6. [Диаграмма компонентов и развертывания](#6) <br>
  
 ### 1. Диаграмма прецедентов <a name="1"></a> 
 ![UseCase](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/useCase/Use%20Case.jpg)
@@ -151,6 +161,24 @@
  
 ### 3. Диаграмма последовательности <a name="3"></a>
 ![Sequence](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/sequence/Sequence%20Diagram.jpg)
+
+### 4. Диаграммы состояний <a name="4"></a>
+#### 4.1. Выбор рейса <a name="4.1"></a>
+![FlightSelection](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Choose%20flight.jpg)
+#### 4.2. Информация о дополнительном багаже <a name="4.2"></a>
+![Extras](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Extras.jpg)
+#### 4.3. Регистрация на рейс <a name="4.3"></a>
+![Registration](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Registration.jpg)
+#### 4.4. Панель поиска <a name="4.4"></a>
+![SearchPane](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Search%20pane%20header.jpg)
+
+### 5. Диаграммы классов <a name="5"></a>
+#### 5.1. Backend <a name="5.1"></a>
+![Backend](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Backend%20classes%20diagram.jpg)
+#### 5.2. Security <a name="5.2"></a>
+![Security](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Security%20classes%20diagram.jpg)
+#### 5.3. Database <a name="5.3"></a>
+![Database](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Database%20classes%20diagram.jpg)
  
- 
- 
+### 6. Диаграмма компонентов и развертывания <a name="6"></a>
+![Deployment&Components](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/deployment/Deployment%20diagram.jpg)
