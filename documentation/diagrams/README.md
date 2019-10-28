@@ -165,12 +165,20 @@
 
 ### 4. Диаграммы состояний <a name="4"></a>
 #### 4.1. Выбор рейса <a name="4.1"></a>
+Окно выбора рейса
+https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_2.png
 ![FlightSelection](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Choose%20flight.jpg)
 #### 4.2. Информация о дополнительном багаже <a name="4.2"></a>
+Окно ввода дополнительныой информации о багаже
+https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_4.png
 ![Extras](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Extras.jpg)
 #### 4.3. Регистрация на рейс <a name="4.3"></a>
+Окно регистрации 
+https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/mockups/Page_3.png
 ![Registration](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Registration.jpg)
 #### 4.4. Панель поиска <a name="4.4"></a>
+Пример окна с панелью поиска рейсов
+https://github.com/MaximUlianov/Fly-project/blob/master/documentation/mockups/Page_1.png
 ![SearchPane](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/state/Search%20pane%20header.jpg)
 
 ### 5. Диаграммы классов <a name="5"></a>
