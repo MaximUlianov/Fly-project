@@ -24,6 +24,7 @@
 	5.1 [Backend](#5.1) <br>
 	5.2 [Security](#5.2) <br>
 	5.3	[Database](#5.3) <br>
+	5.4 [Frontend](#5.4) <br>
 6. [Диаграмма компонентов и развертывания](#6) <br>
  
 ### 1. Диаграмма прецедентов <a name="1"></a> 
@@ -179,6 +180,8 @@
 ![Security](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Security%20classes%20diagram.jpg)
 #### 5.3. Database <a name="5.3"></a>
 ![Database](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Database%20classes%20diagram.jpg)
+#### 5.3. Frontend <a name="5.3"></a>
+![Frontend](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Frontend%20classes%20diagram.jpg)
  
 ### 6. Диаграмма компонентов и развертывания <a name="6"></a>
 ![Deployment&Components](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/deployment/Deployment%20diagram.jpg)
