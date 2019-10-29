@@ -182,7 +182,7 @@ https://github.com/MaximUlianov/Fly-project/blob/master/documentation/mockups/Pa
 
 ### 5. Диаграммы классов <a name="5"></a>
 #### 5.1. Backend <a name="5.1"></a>
-![Backend](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Backend%20classes%20diagram.jpg)
+![Backend](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Backend%20class%20diagram.jpg)
 #### 5.2. Security <a name="5.2"></a>
 ![Security](https://raw.githubusercontent.com/MaximUlianov/Fly-project/master/documentation/diagrams/class/Security%20classes%20diagram.jpg)
 #### 5.3. Database <a name="5.3"></a>
