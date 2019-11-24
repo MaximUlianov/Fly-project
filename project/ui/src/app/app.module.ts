@@ -10,6 +10,9 @@ import {ExtrasComponent} from './components/extras/extras.component';
 import {ConfirmationComponent} from './components/confirmation/confirmation.component';
 import {RouterModule, Routes} from "@angular/router";
 import { ReviewOrderComponent } from './components/review-order/review-order.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {FlightService} from "./services/flight.service";
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [
   {path: 'main', component: LandingComponent},
@@ -18,6 +21,8 @@ const appRoutes: Routes = [
   {path:'extras', component: ExtrasComponent},
   {path:'review-order', component: ReviewOrderComponent},
   {path:'confirmation', component: ConfirmationComponent},
+
+  {path:'', redirectTo:'/main', pathMatch:'full'},
   {path:'main/flight-choose', redirectTo:'flight-choose', pathMatch:'full'}
 ];
 
@@ -35,9 +40,11 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FlightService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

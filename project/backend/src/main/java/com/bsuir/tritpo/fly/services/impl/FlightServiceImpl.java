@@ -3,6 +3,7 @@ package com.bsuir.tritpo.fly.services.impl;
 import com.bsuir.tritpo.fly.REST.RESTConstants;
 import com.bsuir.tritpo.fly.REST.RESTMethods;
 import com.bsuir.tritpo.fly.converters.FlightConverter;
+import com.bsuir.tritpo.fly.models.DTOs.AirportSuggestionDto;
 import com.bsuir.tritpo.fly.models.api_models.FlightResponse;
 import com.bsuir.tritpo.fly.models.api_models.airport_model.Airport;
 import com.bsuir.tritpo.fly.services.FlightService;
@@ -52,7 +53,9 @@ public class FlightServiceImpl implements FlightService {
                 .asObject(String.class);
         Gson g = new Gson();
         List<Airport> airports = flightConverter.filterAirports(g.fromJson(response.getBody(), Airport[].class));
+        List<AirportSuggestionDto> airportSuggestions = flightConverter.convertAirportsToSuggestion(airports);
         airportsSingleton.setAirportList(airports);
+        airportsSingleton.setAirportSuggetstions(airportSuggestions);
         return airports;
     }
 

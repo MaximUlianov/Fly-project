@@ -2,6 +2,7 @@ package com.bsuir.tritpo.fly.controllers;
 
 
 import com.bsuir.tritpo.fly.converters.FlightConverter;
+import com.bsuir.tritpo.fly.models.DTOs.AirportSuggestionDto;
 import com.bsuir.tritpo.fly.models.api_models.FlightResponse;
 import com.bsuir.tritpo.fly.models.api_models.airport_model.Airport;
 import com.bsuir.tritpo.fly.services.FlightService;
@@ -47,17 +48,12 @@ public class FlightController {
         return ResponseEntity.ok("ok");
     }
 
-    @GetMapping(value = "/getAirports")
+    @GetMapping(value = "/getAirports/{searchValue}")
     @ResponseBody
-    public ResponseEntity getAirports() {
-        List<Airport> airports = null;
-        try {
-            airports = flightService.getAirports();
-        } catch (UnirestException e) {
-            e.printStackTrace();
-        }
+    public ResponseEntity getAirports(@PathVariable("searchValue") String searchValue) {
+        List<AirportSuggestionDto> airports = airportsSingleton.getAirportSuggetstions();
         if (airports != null){
-            return ResponseEntity.ok("ok");
+            return ResponseEntity.ok(flightConverter.findAirportsByCityName(airports, searchValue));
         }
         return ResponseEntity.ok("ok");
     }
