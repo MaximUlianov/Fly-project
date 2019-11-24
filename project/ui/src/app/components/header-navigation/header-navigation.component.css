@@ -1,0 +1,38 @@
+.header-navigation {
+  position: absolute;
+  display: inline-flex;
+  top: 10px;
+  margin-left: 25%;
+}
+
+.header-navigation-item {
+  width: 25px;
+  height: 25px;
+}
+
+.header-navigation-item-circle {
+  background-color: red;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.-active {
+  background-color: green;
+}
+
+.header-navigation-item-description{
+
+}
+
+.header-navigation-item-separator {
+  height:2px;
+  margin-top: 0.7rem;
+  width: 150px;
+  background-color: black;
+}
+
+.link{
+  color: black;
+  text-decoration: none;
+}

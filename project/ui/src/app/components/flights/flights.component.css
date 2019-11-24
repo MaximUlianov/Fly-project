@@ -1,0 +1,23 @@
+.flights-block {
+  position: absolute;
+  right: 10rem;
+  top: 10rem;
+}
+
+.card {
+  width: 600px;
+  margin-bottom: 1rem;
+}
+
+.image-take-off {
+  margin-right: 30px;
+}
+
+.image-landing {
+  margin-left: 30px;
+}
+
+.btn-buy {
+  margin-left: 460px;
+  width: 100px;
+}

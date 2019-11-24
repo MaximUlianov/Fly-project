@@ -1,0 +1,46 @@
+.registration-block {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+}
+
+.card {
+  width: 500px;
+  height: 525px;
+}
+
+
+.card-title{
+  padding-bottom: 5px;
+}
+
+.card-text {
+  padding-bottom: 5px;
+}
+
+.proceed-registration {
+  position: absolute;
+  top: 20rem;
+  right: 20rem;
+  opacity: 80%;
+}
+
+.proceed-registration:hover{
+  opacity: 100%;
+}
+
+.proceed-registration-logo {
+  border: 1px solid;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.logo {
+  margin-left: 8px;
+  margin-top: 24px;
+}
+
+.proceed-registration-text {
+  margin-top: 10px;
+}

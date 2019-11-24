@@ -13,6 +13,7 @@ import { ReviewOrderComponent } from './components/review-order/review-order.com
 import {ReactiveFormsModule} from "@angular/forms";
 import {FlightService} from "./services/flight.service";
 import {HttpClientModule} from "@angular/common/http";
+import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
 
 const appRoutes: Routes = [
   {path: 'main', component: LandingComponent},
@@ -22,8 +23,17 @@ const appRoutes: Routes = [
   {path:'review-order', component: ReviewOrderComponent},
   {path:'confirmation', component: ConfirmationComponent},
 
-  {path:'', redirectTo:'/main', pathMatch:'full'},
-  {path:'main/flight-choose', redirectTo:'flight-choose', pathMatch:'full'}
+  {path:'', redirectTo:'/registration', pathMatch:'full'},
+  {path:'main/flight-choose', redirectTo:'flight-choose', pathMatch:'full'},
+  {path:'flight-choose/registration', redirectTo:'registration', pathMatch:'full'},
+  {path:'registration/flight-choose', redirectTo:'flight-choose', pathMatch:'full'},
+  {path:'registration/extras', redirectTo:'extras', pathMatch:'full'},
+  {path:'extras/registration', redirectTo:'registration', pathMatch:'full'},
+  {path:'extras/flight-choose', redirectTo:'flight-choose', pathMatch:'full'},
+  {path:'extras/review-order', redirectTo:'review-order', pathMatch:'full'},
+  {path:'review-order/extras', redirectTo:'extras', pathMatch:'full'},
+  {path:'review-order/confirmation', redirectTo:'confirmation', pathMatch:'full'},
+  {path:'confirmation/main', redirectTo:'main', pathMatch:'full'},
 ];
 
 
@@ -36,7 +46,8 @@ const appRoutes: Routes = [
     LandingComponent,
     ExtrasComponent,
     ConfirmationComponent,
-    ReviewOrderComponent
+    ReviewOrderComponent,
+    HeaderNavigationComponent
   ],
   imports: [
     BrowserModule,

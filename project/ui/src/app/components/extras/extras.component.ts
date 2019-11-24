@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExtrasComponent implements OnInit {
 
+  public counter: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  increment(){
+    this.counter++;
+  }
+
+  decrement(){
+    if (this.counter > 0) {
+      this.counter--;
+    }
   }
 
 }

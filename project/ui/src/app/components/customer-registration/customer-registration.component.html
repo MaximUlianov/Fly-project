@@ -1,1 +1,43 @@
-<p>customer-registration works!</p>
+<fly-header-navigation></fly-header-navigation>
+
+<div class="registration-block">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="formGroup">
+        <h5 class="card-title">Registration form</h5>
+        <p class="card-text">
+          <label for="firstName">First name</label>
+          <input type="text" [formControlName]="'firstName'" class="form-control" id="firstName" placeholder="John">
+        </p>
+        <p class="card-text">
+          <label for="lastName">Last name</label>
+          <input type="text" [formControlName]="'lastName'" class="form-control" id="lastName" placeholder="Cena">
+        </p>
+        <p class="card-text">
+          <label for="birthday">Birthday</label>
+          <input type="date" [formControlName]="'birthday'" class="form-control" id="birthday" placeholder="Birthday">
+        </p>
+        <p class="card-text">
+          <label for="passportId">Passport ID</label>
+          <input type="text" [formControlName]="'passportId'" class="form-control" id="passportId"
+                 placeholder="Passport id">
+        </p>
+        <p class="card-text">
+          <label for="email">Contact email</label>
+          <input type="text" [formControlName]="'email'" class="form-control" id="email" placeholder="Contact email">
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="proceed-registration">
+  <a routerLink="extras" class="btn">
+    <div class="proceed-registration-logo">
+      <img class="logo" src="../../../assets/icons/plane_proceed_48px.png">
+    </div>
+    <div class="proceed-registration-text">
+      <p>Proceed</p>
+    </div>
+  </a>
+</div>
