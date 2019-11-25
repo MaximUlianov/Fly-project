@@ -1,12 +1,13 @@
 .registration-block {
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   left: 10rem;
+  padding-bottom: 1rem;
 }
 
 .card {
   width: 500px;
-  height: 525px;
+  height: auto;
 }
 
 
@@ -27,6 +28,10 @@
 
 .proceed-registration:hover{
   opacity: 100%;
+}
+
+.-unclickable {
+  pointer-events: none;
 }
 
 .proceed-registration-logo {

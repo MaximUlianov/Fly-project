@@ -13,7 +13,10 @@ import { ReviewOrderComponent } from './components/review-order/review-order.com
 import {ReactiveFormsModule} from "@angular/forms";
 import {FlightService} from "./services/flight.service";
 import {HttpClientModule} from "@angular/common/http";
-import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
+import {HeaderNavigationComponent} from './components/header-navigation/header-navigation.component';
+import {CustomerService} from "./services/customer.service";
+import { ErrorFieldComponent } from './components/error-field/error-field.component';
+import { ErrorPopupComponent } from './components/error-popup/error-popup.component';
 
 const appRoutes: Routes = [
   {path: 'main', component: LandingComponent},
@@ -23,7 +26,7 @@ const appRoutes: Routes = [
   {path:'review-order', component: ReviewOrderComponent},
   {path:'confirmation', component: ConfirmationComponent},
 
-  {path:'', redirectTo:'/registration', pathMatch:'full'},
+  {path:'', redirectTo:'/main', pathMatch:'full'},
   {path:'main/flight-choose', redirectTo:'flight-choose', pathMatch:'full'},
   {path:'flight-choose/registration', redirectTo:'registration', pathMatch:'full'},
   {path:'registration/flight-choose', redirectTo:'flight-choose', pathMatch:'full'},
@@ -47,7 +50,9 @@ const appRoutes: Routes = [
     ExtrasComponent,
     ConfirmationComponent,
     ReviewOrderComponent,
-    HeaderNavigationComponent
+    HeaderNavigationComponent,
+    ErrorFieldComponent,
+    ErrorPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [FlightService],
+  providers: [FlightService, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

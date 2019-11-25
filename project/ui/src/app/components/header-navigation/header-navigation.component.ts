@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'fly-header-navigation',
@@ -12,6 +12,9 @@ export class HeaderNavigationComponent implements OnInit {
   public extras: boolean;
   public reviewCart: boolean;
   public confirmation: boolean;
+
+  @Input()
+  sdsd: boolean;
 
 
 

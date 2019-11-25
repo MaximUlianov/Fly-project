@@ -8,23 +8,43 @@
         <p class="card-text">
           <label for="firstName">First name</label>
           <input type="text" [formControlName]="'firstName'" class="form-control" id="firstName" placeholder="John">
+          <fly-error-field
+            [displayError]="isFieldValid('firstName')"
+            [errorMsg]="'First name is required'">
+          </fly-error-field>
         </p>
         <p class="card-text">
           <label for="lastName">Last name</label>
           <input type="text" [formControlName]="'lastName'" class="form-control" id="lastName" placeholder="Cena">
+          <fly-error-field
+            [displayError]="isFieldValid('lastName')"
+            [errorMsg]="'Last name is required'">
+          </fly-error-field>
         </p>
         <p class="card-text">
           <label for="birthday">Birthday</label>
           <input type="date" [formControlName]="'birthday'" class="form-control" id="birthday" placeholder="Birthday">
+          <fly-error-field
+            [displayError]="isFieldValid('birthday')"
+            [errorMsg]="'Birthday is required'">
+          </fly-error-field>
         </p>
         <p class="card-text">
           <label for="passportId">Passport ID</label>
           <input type="text" [formControlName]="'passportId'" class="form-control" id="passportId"
                  placeholder="Passport id">
+          <fly-error-field
+            [displayError]="isFieldValid('passportId')"
+            [errorMsg]="'Passport id is required'">
+          </fly-error-field>
         </p>
         <p class="card-text">
           <label for="email">Contact email</label>
           <input type="text" [formControlName]="'email'" class="form-control" id="email" placeholder="Contact email">
+          <fly-error-field
+            [displayError]="isFieldValid('email')"
+            [errorMsg]="'Email is invalid'">
+          </fly-error-field>
         </p>
       </form>
     </div>
@@ -32,7 +52,7 @@
 </div>
 
 <div class="proceed-registration">
-  <a routerLink="extras" class="btn">
+  <a class="btn" (click)="registerCustomer()">
     <div class="proceed-registration-logo">
       <img class="logo" src="../../../assets/icons/plane_proceed_48px.png">
     </div>
@@ -41,3 +61,7 @@
     </div>
   </a>
 </div>
+
+<fly-error-popup *ngIf="showErrorPopup"
+                 [errorMessage]="'Some fields are filled incorrectly'">
+</fly-error-popup>

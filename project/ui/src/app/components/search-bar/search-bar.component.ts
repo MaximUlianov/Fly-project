@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import * as moment from 'moment';
 import {FlightService} from "../../services/flight.service";
 import {AirportSuggestion} from "../../models/airport.suggestion";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -22,7 +23,8 @@ export class SearchBarComponent implements OnInit {
   private originPlace: string;
   private destinationPlace: string;
 
-  constructor(private flightService: FlightService) {
+  constructor(private flightService: FlightService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -96,7 +98,13 @@ export class SearchBarComponent implements OnInit {
   }
 
   searchFlights(): void {
-
+    this.router.navigate(['flight-choose'], {
+      queryParams: {
+        origin: this.originPlace,
+        destination: this.destinationPlace,
+        date: this.formGroup.get('dateThere').value
+      }
+    });
   }
 
 
