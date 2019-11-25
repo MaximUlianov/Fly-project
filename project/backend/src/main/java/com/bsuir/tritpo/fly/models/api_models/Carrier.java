@@ -2,7 +2,7 @@ package com.bsuir.tritpo.fly.models.api_models;
 
 import java.io.Serializable;
 
-public class Carrier implements Serializable {
+public class  Carrier implements Serializable {
     private int CarrierId;
     private String Name;
 

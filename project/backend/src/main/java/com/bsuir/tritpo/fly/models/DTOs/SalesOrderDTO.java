@@ -3,7 +3,7 @@ package com.bsuir.tritpo.fly.models.DTOs;
 import com.bsuir.tritpo.fly.models.CustomerDTO;
 
 public class SalesOrderDTO {
-    private FlightDTO ticketThere;
+    private  FlightDTO ticketThere;
     private FlightDTO ticketBack;
     private CustomerDTO customer;
     private ExtrasDTO extras;

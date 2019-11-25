@@ -3,7 +3,7 @@ package com.bsuir.tritpo.fly.models.api_models;
 import java.io.Serializable;
 import java.util.List;
 
-public class AvailableDate implements Serializable {
+public class  AvailableDate implements Serializable {
     private String PartialDate;
     private List<Integer> QuoteIds;
     private double Price;

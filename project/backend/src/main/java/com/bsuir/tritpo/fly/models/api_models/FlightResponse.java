@@ -3,7 +3,7 @@ package com.bsuir.tritpo.fly.models.api_models;
 import java.io.Serializable;
 import java.util.List;
 
-public class FlightResponse implements Serializable {
+public class  FlightResponse implements Serializable {
     private FlightDate Dates;
     private List<Quote> Quotes;
     private List<Place> Places;

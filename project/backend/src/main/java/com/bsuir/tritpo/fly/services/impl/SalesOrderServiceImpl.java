@@ -40,7 +40,7 @@ public class SalesOrderServiceImpl implements SalesOrderService {
         SalesOrderDTO salesOrderDTO = salesOrderSingleton.getSalesOrder();
         salesOrderDTO.setExtras(extrasDTO);
         salesOrderSingleton.setSalesOrder(salesOrderDTO);
-        return extrasDTO;
+         return extrasDTO;
     }
 
     @Override

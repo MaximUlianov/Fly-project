@@ -8,7 +8,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import java.util.List;
 
 public interface FlightService {
-    FlightDTO getAvailableFlights(String originPlace, String destinationPlace,
+    FlightDTO  getAvailableFlights(String originPlace, String destinationPlace,
                                   String outboundPartialDate) throws UnirestException;
     List<Airport> getAirports() throws UnirestException;
 }

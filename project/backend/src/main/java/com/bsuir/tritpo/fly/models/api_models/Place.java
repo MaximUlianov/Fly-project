@@ -2,7 +2,7 @@ package com.bsuir.tritpo.fly.models.api_models;
 
 import java.io.Serializable;
 
-public class Place implements Serializable {
+public class  Place implements Serializable {
     private int PlaceId;
     private String IataCode;
     private String name;
