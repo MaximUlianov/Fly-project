@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("singleton")
 public class CustomerSingleton {
-    private CustomerDTO customer;
+     private CustomerDTO customer;
 
     public CustomerDTO getCustomer() {
         return customer;

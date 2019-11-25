@@ -12,7 +12,7 @@ import java.util.List;
 @Scope("singleton")
 public class AirportsSingleton {
     private List<Airport> airportList;
-    private List<AirportSuggestionDto> airportSuggetstions;
+     private List<AirportSuggestionDto> airportSuggetstions;
 
     public List<Airport> getAirportList() {
         return airportList;

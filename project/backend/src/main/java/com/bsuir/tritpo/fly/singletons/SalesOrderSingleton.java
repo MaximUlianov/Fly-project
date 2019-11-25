@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("singleton")
 public class SalesOrderSingleton {
-    private SalesOrderDTO salesOrder;
+     private SalesOrderDTO salesOrder;
 
     public SalesOrderDTO getSalesOrder() {
         return salesOrder;
