@@ -3,8 +3,7 @@ package com.bsuir.tritpo.fly.controllers;
 
 import com.bsuir.tritpo.fly.converters.FlightConverter;
 import com.bsuir.tritpo.fly.models.DTOs.AirportSuggestionDto;
-import com.bsuir.tritpo.fly.models.api_models.FlightResponse;
-import com.bsuir.tritpo.fly.models.api_models.airport_model.Airport;
+import com.bsuir.tritpo.fly.models.DTOs.FlightDTO;
 import com.bsuir.tritpo.fly.services.FlightService;
 import com.bsuir.tritpo.fly.singletons.AirportsSingleton;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -20,15 +19,17 @@ import java.util.List;
 public class FlightController {
 
     private FlightService flightService;
+
     private FlightConverter flightConverter;
 
-    @Autowired
     private AirportsSingleton airportsSingleton;
 
     @Autowired
-    public FlightController(FlightService flightService, FlightConverter flightConverter) {
+    public FlightController(FlightService flightService, FlightConverter flightConverter,
+                            AirportsSingleton airportsSingleton) {
         this.flightService = flightService;
         this.flightConverter = flightConverter;
+        this.airportsSingleton = airportsSingleton;
     }
 
     @GetMapping(value = "/getAvailableFlights/{originPlace}/{destinationPlace}/{outboundPartialDate}")
@@ -36,7 +37,7 @@ public class FlightController {
     public ResponseEntity getFlight(@PathVariable("originPlace") String originPlace,
                                     @PathVariable("destinationPlace") String destinationPlace,
                                     @PathVariable("outboundPartialDate") String outboundPartialDate) {
-        FlightResponse response = null;
+        FlightDTO response = null;
         try {
             response = flightService.getAvailableFlights(originPlace, destinationPlace, outboundPartialDate);
         } catch (UnirestException e) {

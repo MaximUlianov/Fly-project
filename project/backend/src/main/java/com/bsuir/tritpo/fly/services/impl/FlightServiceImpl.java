@@ -4,6 +4,7 @@ import com.bsuir.tritpo.fly.REST.RESTConstants;
 import com.bsuir.tritpo.fly.REST.RESTMethods;
 import com.bsuir.tritpo.fly.converters.FlightConverter;
 import com.bsuir.tritpo.fly.models.DTOs.AirportSuggestionDto;
+import com.bsuir.tritpo.fly.models.DTOs.FlightDTO;
 import com.bsuir.tritpo.fly.models.api_models.FlightResponse;
 import com.bsuir.tritpo.fly.models.api_models.airport_model.Airport;
 import com.bsuir.tritpo.fly.services.FlightService;
@@ -33,8 +34,10 @@ public class FlightServiceImpl implements FlightService {
 
 
     @Override
-    public FlightResponse getAvailableFlights(String originPlace, String destinationPlace,
-                                              String outboundPartialDate) throws UnirestException {
+    public FlightDTO getAvailableFlights(String originPlace, String destinationPlace,
+                                         String outboundPartialDate) throws UnirestException {
+        originPlace += RESTConstants.PLACE_POSTFIX;
+        destinationPlace += RESTConstants.PLACE_POSTFIX;
         HttpResponse<String> response = Unirest.get(RESTMethods.GET_FLIGHTS + RESTConstants.COUNTRY + '/' +
                 RESTConstants.CURRENCY + '/' + RESTConstants.LOCALE + '/' +
                 originPlace + '/' + destinationPlace + '/' + outboundPartialDate)
@@ -42,7 +45,11 @@ public class FlightServiceImpl implements FlightService {
                 .header(RESTConstants.RapidAPI_TOKEN_KEY, RESTConstants.RapidAPI_TOKEN_VALUE)
                 .asObject(String.class);
         Gson g = new Gson();
-        return g.fromJson(response.getBody(), FlightResponse.class);
+        FlightResponse flightResponse = g.fromJson(response.getBody(), FlightResponse.class);
+        if (flightResponse != null) {
+            return flightConverter.convertFlightResponseToDTO(flightResponse);
+        }
+        return null;
     }
 
     @PostConstruct

@@ -11,5 +11,6 @@ public class RESTConstants {
     public static final String LOCALE = "en-US";
     public static final String COUNTRY = "US";
     public static final String CURRENCY = "USD";
+    public static final String PLACE_POSTFIX = "-sky";
 
 }
