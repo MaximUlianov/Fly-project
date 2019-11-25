@@ -2,7 +2,7 @@
 @import "assets/styles/animated.css";
 
 head, body {
-  height: 100%;
+  height: auto;
   width: 100%;
   background-image: url("assets/backgrounds/sky.jpg");
   background-repeat: no-repeat;

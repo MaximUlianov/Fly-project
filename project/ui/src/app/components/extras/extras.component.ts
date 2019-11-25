@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CustomerModel} from "../../models/customer.model";
+import {CustomerService} from "../../services/customer.service";
+import {SalesService} from "../../services/sales.service";
+import {ExtrasModel} from "../../models/extras.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'fly-extras',
@@ -8,20 +13,42 @@ import { Component, OnInit } from '@angular/core';
 export class ExtrasComponent implements OnInit {
 
   public counter: number = 0;
+  public costPerOne: number = 15;
+  public customer: CustomerModel;
+  public extras: ExtrasModel;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private customerService: CustomerService,
+              private salesOrderService: SalesService,
+              private router: Router) {
   }
 
-  increment(){
+  ngOnInit() {
+    this.customerService.getActiveCustomer().subscribe(data => {
+      if (data) {
+        this.customer = data;
+      }
+    });
+  }
+
+  increment() {
     this.counter++;
   }
 
-  decrement(){
+  decrement() {
     if (this.counter > 0) {
       this.counter--;
     }
+  }
+
+  saveExtras() {
+    this.extras = new ExtrasModel();
+    this.extras.amount = this.counter;
+    this.extras.price = this.counter * this.costPerOne;
+    this.salesOrderService.buyExtras(this.extras).subscribe(data => {
+      if(data){
+        this.router.navigate(['review-order']);
+      }
+    })
   }
 
 }

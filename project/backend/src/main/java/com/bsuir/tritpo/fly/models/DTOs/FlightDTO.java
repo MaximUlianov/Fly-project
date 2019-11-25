@@ -8,6 +8,7 @@ public class FlightDTO {
     private String originCode;
     private String destinationCity;
     private String destinationCode;
+    private boolean back;
 
     public FlightDTO() {
     }
@@ -50,5 +51,13 @@ public class FlightDTO {
 
     public void setDestinationCode(String destinationCode) {
         this.destinationCode = destinationCode;
+    }
+
+    public boolean isBack() {
+        return back;
+    }
+
+    public void setBack(boolean back) {
+        this.back = back;
     }
 }

@@ -14,14 +14,14 @@
         </thead>
         <tbody>
         <tr>
-          <th scope="row">Name</th>
-          <td>lalala</td>
+          <th scope="row">{{customer.firstName + ' ' + customer.lastName}}</th>
+          <td>{{costPerOne + '$/one bag'}}</td>
           <td>
             <button class="extras-button" (click)="decrement()">-</button>
             {{counter}}
             <button class="extras-button" (click)="increment()">+</button>
           </td>
-          <td>50$</td>
+          <td>{{(counter * costPerOne) + '$'}}</td>
         </tr>
         </tbody>
       </table>
@@ -31,7 +31,7 @@
 
 
 <div class="proceed-extras">
-  <a routerLink="review-order" class="btn">
+  <a class="btn" (click)="saveExtras()">
     <div class="proceed-extras-logo">
       <img class="logo" src="../../../assets/icons/plane_proceed_48px.png">
     </div>

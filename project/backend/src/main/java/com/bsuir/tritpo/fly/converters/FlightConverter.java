@@ -12,5 +12,6 @@ public interface FlightConverter {
     List<AirportSuggestionDto> convertAirportsToSuggestion(List<Airport> airports);
     List<AirportSuggestionDto> findAirportsByCityName(List<AirportSuggestionDto> airportSuggestions,
                                                       String searchValue);
-    FlightDTO convertFlightResponseToDTO(FlightResponse flightResponse);
+    FlightDTO convertFlightResponseToDTO(FlightResponse flightResponse, String origin,  String destination,
+                                         String date);
 }

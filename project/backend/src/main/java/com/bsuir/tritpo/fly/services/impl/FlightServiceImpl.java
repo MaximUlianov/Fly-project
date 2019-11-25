@@ -36,18 +36,19 @@ public class FlightServiceImpl implements FlightService {
     @Override
     public FlightDTO getAvailableFlights(String originPlace, String destinationPlace,
                                          String outboundPartialDate) throws UnirestException {
-        originPlace += RESTConstants.PLACE_POSTFIX;
-        destinationPlace += RESTConstants.PLACE_POSTFIX;
+        String originPlacePost = originPlace + RESTConstants.PLACE_POSTFIX;
+        String destinationPlacePost = destinationPlace + RESTConstants.PLACE_POSTFIX;
         HttpResponse<String> response = Unirest.get(RESTMethods.GET_FLIGHTS + RESTConstants.COUNTRY + '/' +
                 RESTConstants.CURRENCY + '/' + RESTConstants.LOCALE + '/' +
-                originPlace + '/' + destinationPlace + '/' + outboundPartialDate)
+                originPlacePost + '/' + destinationPlacePost + '/' + outboundPartialDate)
                 .header(RESTConstants.RapidAPI_HOST_KEY, RESTConstants.RapidAPI_HOST_VALUE)
                 .header(RESTConstants.RapidAPI_TOKEN_KEY, RESTConstants.RapidAPI_TOKEN_VALUE)
                 .asObject(String.class);
         Gson g = new Gson();
         FlightResponse flightResponse = g.fromJson(response.getBody(), FlightResponse.class);
         if (flightResponse != null) {
-            return flightConverter.convertFlightResponseToDTO(flightResponse);
+            return flightConverter.convertFlightResponseToDTO(flightResponse, originPlace, destinationPlace,
+                    outboundPartialDate);
         }
         return null;
     }

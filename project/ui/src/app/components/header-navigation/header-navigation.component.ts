@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'fly-header-navigation',
@@ -13,15 +14,13 @@ export class HeaderNavigationComponent implements OnInit {
   public reviewCart: boolean;
   public confirmation: boolean;
 
-  @Input()
-  sdsd: boolean;
-
-
-
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
-    const href = window.location.href.split('/')[3];
+    let href = window.location.href.split('/')[3];
+    if (href.includes('flight-choose')){
+      href = 'flight-choose';
+    }
     this.chooseActiveLocation(href);
   }
 

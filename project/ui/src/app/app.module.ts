@@ -17,6 +17,7 @@ import {HeaderNavigationComponent} from './components/header-navigation/header-n
 import {CustomerService} from "./services/customer.service";
 import { ErrorFieldComponent } from './components/error-field/error-field.component';
 import { ErrorPopupComponent } from './components/error-popup/error-popup.component';
+import {SalesService} from "./services/sales.service";
 
 const appRoutes: Routes = [
   {path: 'main', component: LandingComponent},
@@ -60,7 +61,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [FlightService, CustomerService],
+  providers: [FlightService, CustomerService, SalesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

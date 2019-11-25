@@ -30,11 +30,11 @@ export class SearchBarComponent implements OnInit {
   ngOnInit() {
     this.currentDate = moment(new Date()).format('YYYY-MM-DD');
     this.formGroup = new FormGroup({
-      'origin': new FormControl(''),
-      'destination': new FormControl(''),
-      'dateThere': new FormControl(''),
-      'dateBack': new FormControl(''),
-      'needBack': new FormControl('')
+      'origin': new FormControl('', Validators.required),
+      'destination': new FormControl('', Validators.required),
+      'dateThere': new FormControl('', Validators.required),
+      'dateBack': new FormControl('', Validators.required),
+      'needBack': new FormControl(true)
     });
   }
 
@@ -98,14 +98,27 @@ export class SearchBarComponent implements OnInit {
   }
 
   searchFlights(): void {
-    this.router.navigate(['flight-choose'], {
-      queryParams: {
-        origin: this.originPlace,
-        destination: this.destinationPlace,
-        date: this.formGroup.get('dateThere').value
+    if (this.formGroup.valid) {
+      const dateBackDisabled = this.formGroup.get('dateBack').disabled;
+      if (dateBackDisabled) {
+        this.router.navigate(['flight-choose'], {
+          queryParams: {
+            origin: this.originPlace,
+            destination: this.destinationPlace,
+            dateThere: this.formGroup.get('dateThere').value,
+          }
+        });
+      } else {
+        this.router.navigate(['flight-choose'], {
+          queryParams: {
+            origin: this.originPlace,
+            destination: this.destinationPlace,
+            dateThere: this.formGroup.get('dateThere').value,
+            dateBack: this.formGroup.get('dateBack').value,
+            back: 'false'
+          }
+        });
       }
-    });
+    }
   }
-
-
 }

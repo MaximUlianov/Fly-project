@@ -1,12 +1,19 @@
 .flights-block {
-  position: absolute;
-  right: 10rem;
-  top: 10rem;
+  position: relative;
+  margin-left: 50rem;
+  margin-top: 10rem;
 }
 
 .card {
   width: 600px;
   margin-bottom: 1rem;
+}
+
+.card-text-carrier{
+  position: absolute;
+  left: 31rem;
+  top: 5rem;
+  font-size: 20px;
 }
 
 .image-take-off {
@@ -21,3 +28,4 @@
   margin-left: 460px;
   width: 100px;
 }
+

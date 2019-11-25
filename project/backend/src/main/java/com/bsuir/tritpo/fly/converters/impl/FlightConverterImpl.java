@@ -46,19 +46,20 @@ public class FlightConverterImpl implements FlightConverter {
     }
 
     @Override
-    public FlightDTO convertFlightResponseToDTO(FlightResponse flightResponse) {
+    public FlightDTO convertFlightResponseToDTO(FlightResponse flightResponse, String origin, String destination,
+                                                String date) {
         if (flightResponse != null) {
             FlightDTO flightDTO = new FlightDTO();
             if (flightResponse.getPlaces() != null) {
-                flightDTO.setOriginCity(flightResponse.getPlaces().get(0).getCityName());
-                flightDTO.setOriginCode(flightResponse.getPlaces().get(0).getIataCode());
-                flightDTO.setDestinationCity(flightResponse.getPlaces().get(1).getCityName());
-                flightDTO.setDestinationCode(flightResponse.getPlaces().get(1).getIataCode());
+                flightDTO.setOriginCity(flightResponse.getPlaces().stream().filter(place -> place.getIataCode().equals(origin)).findFirst().orElse(null).getCityName());
+                flightDTO.setOriginCode(flightResponse.getPlaces().stream().filter(place -> place.getIataCode().equals(origin)).findFirst().orElse(null).getIataCode());
+                flightDTO.setDestinationCity(flightResponse.getPlaces().stream().filter(place -> place.getIataCode().equals(destination)).findFirst().orElse(null).getCityName());
+                flightDTO.setDestinationCode(flightResponse.getPlaces().stream().filter(place -> place.getIataCode().equals(destination)).findFirst().orElse(null).getIataCode());
             }
             if (!CollectionUtils.isEmpty(flightResponse.getQuotes())
             && !CollectionUtils.isEmpty(flightResponse.getCarriers())) {
                 flightDTO.setQuotes(convertQuotesToDTOs(flightResponse.getQuotes(),
-                        flightResponse.getCarriers()));
+                        flightResponse.getCarriers(), date));
             }
             return flightDTO;
 
@@ -66,11 +67,11 @@ public class FlightConverterImpl implements FlightConverter {
         return null;
     }
 
-    private List<QuoteDTO> convertQuotesToDTOs(List<Quote> quotes, List<Carrier> carriers) {
+    private List<QuoteDTO> convertQuotesToDTOs(List<Quote> quotes, List<Carrier> carriers, String date) {
         List<QuoteDTO> quoteDTOS = new ArrayList<>();
         quotes.forEach(quote -> {
             QuoteDTO quoteDTO = new QuoteDTO();
-            quoteDTO.setDepartureDate(parseDate(quote.getOutboundLeg().getDepartureDate())[0]);
+            quoteDTO.setDepartureDate(date);
             quoteDTO.setDepartureTime(parseDate(quote.getQuoteDateTime())[1]);
             quoteDTO.setPrice(quote.getMinPrice());
             quoteDTO.setCarriers(carriers
