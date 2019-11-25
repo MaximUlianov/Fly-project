@@ -22,22 +22,22 @@ public class SalesOrderController {
 
     @PostMapping(value = "/buyTicket")
     @ResponseBody
-    public ResponseEntity buyTicket(@RequestBody FlightDTO ticket){
+    public ResponseEntity buyTicket(@RequestBody FlightDTO ticket) {
         return ResponseEntity.ok(salesOrderService.buyTicket(ticket));
     }
 
 
     @PostMapping(value = "/buyExtras")
     @ResponseBody
-    public ResponseEntity buyExtras(@RequestBody ExtrasDTO extras){
-         return ResponseEntity.ok(salesOrderService.buyExtras(extras));
+    public ResponseEntity buyExtras(@RequestBody ExtrasDTO extras) {
+        return ResponseEntity.ok(salesOrderService.buyExtras(extras));
     }
 
     @GetMapping(value = "/getSalesOrder")
     @ResponseBody
     public ResponseEntity getSalesOrder() {
         SalesOrderDTO salesOrderDTO = salesOrderService.getActiveSalesOrder();
-        if (salesOrderDTO != null){
+        if (salesOrderDTO != null) {
             return ResponseEntity.ok(salesOrderDTO);
         }
         return ResponseEntity.ok("ok");

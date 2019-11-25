@@ -7,6 +7,8 @@ import com.bsuir.tritpo.fly.models.DTOs.SalesOrderDTO;
 public interface SalesOrderService {
 
     FlightDTO buyTicket(FlightDTO flightDTO);
+
     ExtrasDTO buyExtras(ExtrasDTO extrasDTO);
+
     SalesOrderDTO getActiveSalesOrder();
 }

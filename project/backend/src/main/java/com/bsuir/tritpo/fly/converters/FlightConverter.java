@@ -9,9 +9,12 @@ import java.util.List;
 
 public interface FlightConverter {
     List<Airport> filterAirports(Airport[] airports);
+
     List<AirportSuggestionDto> convertAirportsToSuggestion(List<Airport> airports);
-     List<AirportSuggestionDto> findAirportsByCityName(List<AirportSuggestionDto> airportSuggestions,
+
+    List<AirportSuggestionDto> findAirportsByCityName(List<AirportSuggestionDto> airportSuggestions,
                                                       String searchValue);
-    FlightDTO convertFlightResponseToDTO(FlightResponse flightResponse, String origin,  String destination,
+
+    FlightDTO convertFlightResponseToDTO(FlightResponse flightResponse, String origin, String destination,
                                          String date);
 }

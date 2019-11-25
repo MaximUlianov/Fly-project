@@ -1,6 +1,6 @@
 package com.bsuir.tritpo.fly.models.DTOs;
 
-public class  AirportSuggestionDto {
+public class AirportSuggestionDto {
     private String name;
     private String code;
 

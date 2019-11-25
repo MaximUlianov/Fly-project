@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/customer")
 public class CustomerController {
 
-    private CustomerService customerService ;
+    private CustomerService customerService;
 
     @Autowired
     public CustomerController(CustomerService customerService) {
@@ -20,13 +20,13 @@ public class CustomerController {
 
     @PostMapping(value = "/register")
     @ResponseBody
-    public ResponseEntity registerCustomer(@RequestBody CustomerDTO customer){
+    public ResponseEntity registerCustomer(@RequestBody CustomerDTO customer) {
         return ResponseEntity.ok(customerService.registerCustomer(customer));
     }
 
     @GetMapping(value = "/getActive")
     @ResponseBody
-    public ResponseEntity getActiveCustomer(){
+    public ResponseEntity getActiveCustomer() {
         return ResponseEntity.ok(customerService.getActiveCustomer());
     }
 }

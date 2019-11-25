@@ -57,7 +57,7 @@ public class FlightConverterImpl implements FlightConverter {
                 flightDTO.setDestinationCode(flightResponse.getPlaces().stream().filter(place -> place.getIataCode().equals(destination)).findFirst().orElse(null).getIataCode());
             }
             if (!CollectionUtils.isEmpty(flightResponse.getQuotes())
-            && !CollectionUtils.isEmpty(flightResponse.getCarriers())) {
+                    && !CollectionUtils.isEmpty(flightResponse.getCarriers())) {
                 flightDTO.setQuotes(convertQuotesToDTOs(flightResponse.getQuotes(),
                         flightResponse.getCarriers(), date));
             }
@@ -75,10 +75,10 @@ public class FlightConverterImpl implements FlightConverter {
             quoteDTO.setDepartureTime(parseDate(quote.getQuoteDateTime())[1]);
             quoteDTO.setPrice(quote.getMinPrice());
             quoteDTO.setCarriers(carriers
-            .stream()
-            .filter(carrier -> quote.getOutboundLeg().getCarrierIds().contains(carrier.getCarrierId()))
-            .map(Carrier::getName)
-            .collect(Collectors.toList()));
+                    .stream()
+                    .filter(carrier -> quote.getOutboundLeg().getCarrierIds().contains(carrier.getCarrierId()))
+                    .map(Carrier::getName)
+                    .collect(Collectors.toList()));
             quoteDTOS.add(quoteDTO);
         });
         return quoteDTOS;

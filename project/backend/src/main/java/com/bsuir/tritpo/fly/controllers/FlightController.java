@@ -53,7 +53,7 @@ public class FlightController {
     @ResponseBody
     public ResponseEntity getAirports(@PathVariable("searchValue") String searchValue) {
         List<AirportSuggestionDto> airports = airportsSingleton.getAirportSuggetstions();
-        if (airports != null){
+        if (airports != null) {
             return ResponseEntity.ok(flightConverter.findAirportsByCityName(airports, searchValue));
         }
         return ResponseEntity.ok("ok");

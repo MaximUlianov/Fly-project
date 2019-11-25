@@ -2,7 +2,7 @@ package com.bsuir.tritpo.fly.models.DTOs;
 
 import java.util.List;
 
-public class  FlightDTO {
+public class FlightDTO {
     List<QuoteDTO> quotes;
     private String originCity;
     private String originCode;
