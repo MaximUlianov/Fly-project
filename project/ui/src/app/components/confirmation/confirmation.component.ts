@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SalesService} from "../../services/sales.service";
 
 @Component({
   selector: 'fly-confirmation',
@@ -8,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class ConfirmationComponent implements OnInit {
 
   ip: boolean = false;
-  constructor() { }
+  constructor(private salesService: SalesService) { }
 
   ngOnInit() {
-    setTimeout(()=>{
+    this.salesService.clearAll().subscribe((data) => {
       this.ip = true;
-    }, 2000);
+    });
   }
 
 }

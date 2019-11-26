@@ -1,12 +1,13 @@
 .review-order-block {
-  position: absolute;
-  top: 10rem;
-  left: 10rem;
+  position: relative;
+  margin-top: 10rem;
+  margin-left: 8rem;
+  padding-bottom: 1rem;
 }
 
 .card {
   width: 500px;
-  height: 525px;
+  height: auto;
 }
 
 .card-title {
@@ -39,4 +40,12 @@
 
 .proceed-review-order-text {
   margin-top: 10px;
+}
+
+.ticket {
+  border: 1px solid;
+  border-radius: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }

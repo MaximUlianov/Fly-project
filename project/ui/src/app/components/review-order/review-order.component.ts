@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SalesService} from "../../services/sales.service";
+import {SalesOrderModel} from "../../models/sales.order.model";
 
 @Component({
   selector: 'app-review-order',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewOrderComponent implements OnInit {
 
-  constructor() { }
+  public salesOrder: SalesOrderModel;
+
+  constructor(private salesOrderService: SalesService) {
+  }
 
   ngOnInit() {
+    this.salesOrderService.getSalesOrder().subscribe(data => {
+      this.salesOrder = data;
+    });
   }
 
 }

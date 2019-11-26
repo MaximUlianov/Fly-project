@@ -40,7 +40,7 @@ public class SalesOrderServiceImpl implements SalesOrderService {
         SalesOrderDTO salesOrderDTO = salesOrderSingleton.getSalesOrder();
         salesOrderDTO.setExtras(extrasDTO);
         salesOrderSingleton.setSalesOrder(salesOrderDTO);
-         return extrasDTO;
+        return extrasDTO;
     }
 
     @Override
@@ -49,8 +49,14 @@ public class SalesOrderServiceImpl implements SalesOrderService {
     }
 
     @PostConstruct
-    private void initializeSalesOrder(){
+    private void initializeSalesOrder() {
         SalesOrderDTO salesOrderDTO = new SalesOrderDTO();
         salesOrderSingleton.setSalesOrder(salesOrderDTO);
+    }
+
+    @Override
+    public void clearAll() {
+        salesOrderSingleton.setSalesOrder(new SalesOrderDTO());
+        customerSingleton.setCustomer(null);
     }
 }

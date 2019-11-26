@@ -43,4 +43,10 @@ public class SalesOrderController {
         return ResponseEntity.ok("ok");
     }
 
+    @GetMapping(value = "/clearAll")
+    @ResponseBody
+    public void clearAll() {
+        salesOrderService.clearAll();
+    }
+
 }

@@ -11,4 +11,6 @@ public interface SalesOrderService {
     ExtrasDTO buyExtras(ExtrasDTO extrasDTO);
 
     SalesOrderDTO getActiveSalesOrder();
+
+    void clearAll();
 }

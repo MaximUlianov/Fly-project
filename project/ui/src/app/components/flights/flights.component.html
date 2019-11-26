@@ -17,9 +17,7 @@
       <p class="card-text-carrier">
         {{quote.carriers[0]}}
       </p>
-      <a class="btn btn-primary btn-buy" (click)="buyTicket(quote)">Buy 50$</a>
+      <a class="btn btn-primary btn-buy" (click)="buyTicket(quote)">{{'Buy ' + quote.price + '$'}}</a>
     </div>
   </div>
 </div>
-
-{{flights | json}}
