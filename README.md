@@ -11,4 +11,5 @@ For building the web-application you need:
 1. [Documentation](https://github.com/MaximUlianov/Fly-project/tree/master/documentation) <br>
   1.1 [SRS](https://github.com/MaximUlianov/Fly-project/blob/master/documentation/SoftwareRequirmentsSpecification.md) <br>
   1.2 [UML Diagrams](https://github.com/MaximUlianov/Fly-project/tree/master/documentation/diagrams)<br>
+  1.3 [Project](https://github.com/MaximUlianov/Fly-project/tree/master/project)<br>
  
