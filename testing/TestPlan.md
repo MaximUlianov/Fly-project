@@ -121,7 +121,7 @@
 
 # 7 Представление результатов  
 
-Результаты тестирования представлены в документе ["Представление результатов"](https://github.com/MaximUlianov/Fly-project/blob/master/Test/TestResults.md).  
+Результаты тестирования представлены в документе ["Представление результатов"](https://github.com/MaximUlianov/Fly-project/blob/master/testing/TestResults.md).  
 
 <a name="conclusion"/>  
 
