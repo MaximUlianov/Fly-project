@@ -1,0 +1,38 @@
+.confirmation-logo {
+  position: absolute;
+  top: 20%;
+  left: 45rem;
+}
+
+.confirmation-logo-text {
+  font-size: 60px;
+
+}
+
+.confirmation-icon {
+  position: absolute;
+  top: 33%;
+  left: 708px;
+  border: 1px solid cornflowerblue;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+}
+
+.confirmation-icon-img {
+  margin-left: 20px;
+  margin-top: 18px;
+}
+
+.confirmation-text {
+  position: absolute;
+  top: 50%;
+  left: 600px;
+  font-size: 18px;
+}
+
+.confirmation-button {
+  position: absolute;
+  top: 60%;
+  left: 680px;
+}

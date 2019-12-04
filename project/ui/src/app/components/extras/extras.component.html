@@ -1,0 +1,44 @@
+<fly-header-navigation></fly-header-navigation>
+
+<div class="extras-block">
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Passenger</th>
+          <th>Baggage allowance</th>
+          <th>Excess baggage</th>
+          <th>Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">{{customer.firstName + ' ' + customer.lastName}}</th>
+          <td>{{costPerOne + '$/one bag'}}</td>
+          <td>
+            <button class="extras-button" (click)="decrement()">-</button>
+            {{counter}}
+            <button class="extras-button" (click)="increment()">+</button>
+          </td>
+          <td>{{(counter * costPerOne) + '$'}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="proceed-extras">
+  <a class="btn" (click)="saveExtras()">
+    <div class="proceed-extras-logo">
+      <img class="logo" src="../../../assets/icons/plane_proceed_48px.png">
+    </div>
+    <div class="proceed-extras-text">
+      <p>Proceed</p>
+    </div>
+  </a>
+</div>
+
+

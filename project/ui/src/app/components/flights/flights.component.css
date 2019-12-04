@@ -1,0 +1,55 @@
+.flights-block {
+  position: relative;
+  margin-left: 50rem;
+  margin-top: 6rem;
+}
+
+.card {
+  width: 600px;
+  margin-bottom: 1rem;
+}
+
+.card-text-carrier {
+  position: absolute;
+  left: 31rem;
+  top: 5rem;
+  font-size: 20px;
+}
+
+.image-take-off {
+  margin-right: 30px;
+}
+
+.image-landing {
+  margin-left: 30px;
+}
+
+.btn-buy {
+  margin-left: 460px;
+  width: 100px;
+}
+
+.time-filtration {
+  position: absolute;
+  top: 10rem;
+  left: 3rem;
+}
+
+.filtration {
+  width: 200px;
+}
+
+.drop-btn {
+  width: 100px;
+}
+
+.time {
+  padding-bottom: 10px;
+}
+
+.dropdown-menu {
+  height: 100px;
+  overflow: auto;
+  border-radius: 10px;
+}
+

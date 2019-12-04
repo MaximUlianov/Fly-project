@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/animated.css";
+
+head, body {
+  height: auto;
+  width: 100%;
+  background-image: url("assets/backgrounds/sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

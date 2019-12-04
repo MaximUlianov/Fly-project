@@ -1,0 +1,49 @@
+<fly-header-navigation></fly-header-navigation>
+
+<div class="flights-block" *ngIf="flights">
+  <div class="card" *ngFor="let quote of flights.quotes">
+    <div class="card-body">
+      <h5 class="card-title">{{flights.originCity + ' ' + flights.originCode + ' - ' +
+      flights.destinationCity + ' ' + flights.destinationCode}}</h5>
+      <p class="card-text">
+        <img class="image-take-off" src="../../../assets/icons/plane_take_off_24px.png">
+      </p>
+      <p class="card-text">
+        {{'Date: ' + quote.departureDate}}
+      </p>
+      <p class="card-text">
+        {{'Time: ' + quote.departureTime}}
+      </p>
+      <p class="card-text-carrier">
+        {{quote.carriers[0]}}
+      </p>
+      <a class="btn btn-primary btn-buy" (click)="buyTicket(quote)">{{'Buy ' + quote.price + '$'}}</a>
+    </div>
+  </div>
+</div>
+
+<div class="time-filtration">
+  <div class="card filtration">
+    <div class="card-body">
+      <h5 class="card-title">Time filtration</h5>
+      <div class="time">
+        <button class="btn drop-btn btn-secondary dropdown-toggle" type="button" id="from" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          {{'From ' + from}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="from">
+          <a class="dropdown-item" *ngFor="let h of hourFrom" (click)="sortTimeFrom(h)">{{h}}</a>
+        </div>
+      </div>
+      <div class="time">
+        <button class="btn drop-btn btn-secondary dropdown-toggle" type="button" id="to" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          {{'To ' + to}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="to">
+          <a class="dropdown-item" *ngFor="let h of hourFrom" (click)="sortTimeTo(h)">{{h}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

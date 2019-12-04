@@ -1,0 +1,17 @@
+.main-logo {
+  position: absolute;
+  top: 30%;
+  left: 45rem;
+}
+
+.main-logo-text{
+  font-size: 60px;
+
+}
+
+.main-controls{
+  position:absolute;
+  display: inline-block;
+  top: 55%;
+  left:19rem;
+}
